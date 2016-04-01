@@ -43,17 +43,18 @@ AppDispatcher.register(function(payload){
 
 			//Emit change
 			AppStore.emit(CHANGE_EVENT);
+            
+            break;
 
 		case AppConstants.RECEIVE_NOTES:
 			console.log('Retrieving Notes...');
 			//Store Save
 			AppStore.setNotes(action.notes)
 
-			//API
-			AppAPI.addNote(action.note)
-
 			//Emit change
 			AppStore.emit(CHANGE_EVENT);
+            
+            break;
 		
 	}
 
